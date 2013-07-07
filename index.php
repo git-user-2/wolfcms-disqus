@@ -35,7 +35,7 @@ define('DISQUS_ROOT', URI_PUBLIC.'wolf/plugins/disqus');
 AutoLoader::addFile('Disqus', CORE_ROOT.'/plugins/disqus/Disqus.php');
 
 // Add the plugin's tab and controller
-Plugin::addController('disqus', __('Disqus'), 'administrator', true);
+Plugin::addController('disqus', __('Disqus'), 'administrator', false);
 
 // Observe the necessary events.
 Observer::observe('view_page_edit_plugins', 'disqus_display_dropdown');

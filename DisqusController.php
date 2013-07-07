@@ -37,7 +37,8 @@ class DisqusController extends PluginController {
     }
 
     function index() {
-        $this->display('disqus/views/index');
+//        $this->display('disqus/views/index');
+        $this->display('disqus/views/documentation');
     }
 
     function settings() {
