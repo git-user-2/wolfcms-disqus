@@ -18,4 +18,5 @@ if (!defined('IN_CMS')) { exit(); }
 
 <h1><?php echo __('Comments'); ?></h1>
 
+<!-- TODO -->
 <p>Display recent comments for a given disqus_shortname here</p>
