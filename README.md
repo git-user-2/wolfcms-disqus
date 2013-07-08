@@ -18,9 +18,9 @@ You will need to add the following lines of code to your layout - place them whe
 <?php
     if (Plugin::isEnabled('disqus'))
     {
-        if ($this-&gt;comment_status != Disqus::NONE)
+        if ($this->comment_status != Disqus::NONE)
         {
-            $this-&gt;includeSnippet('disqus_boilerplate');
+            $this->includeSnippet('disqus_boilerplate');
         }
     }
 ?>
