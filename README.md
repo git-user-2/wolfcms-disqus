@@ -29,8 +29,8 @@ You will need to add the following lines of code to your layout - place them whe
 ### License
 
 This Wolf plugin is made available under the GNU GPL3 or later.
-[http://www.gnu.org/licenses/gpl.html][2]
-Copyright (C) 2013 Kyle Jones 
+http://www.gnu.org/licenses/gpl.html
+
+Copyright (C) 2013 Kyle Jones
 
 [1]: http://disqus.com/admin/settings/
-[2]: http://www.gnu.org/licenses/gpl.html
