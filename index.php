@@ -18,11 +18,11 @@ Plugin::setInfos(array(
 	'id'          => 'disqus',
 	'title'       => __('Disqus'),
 	'description' => __('Disqus for Wolf CMS.'),
-	'version'     => '.0.1',
+	'version'     => '0.0.1',
 	'license'     => 'GPL',
 	'author'      => 'Kyle Jones',
 	'website'     => 'http://www.whabash.com/',
-        'update_url'  => 'http://www.wolfcms.org/plugin-versions.xml',
+        'update_url'  => 'http://www.whabash.com/wolf_plugins/plugin-versions.xml',
 	'require_wolf_version' => '0.5.5'
 ));
 
