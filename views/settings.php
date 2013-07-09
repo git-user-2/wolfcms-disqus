@@ -24,11 +24,21 @@ if (!defined('IN_CMS')) { exit(); }
             <tr>
                 <td class="label"><label for="rowspage"><?php echo __('Disqus Shortname'); ?>: </label></td>
                 <td class="field">
-                    <input type="text" class="textinput" value="<?php echo $disqus_shortname; ?>" name="disqus_shortname" />
+                    <input type="text" class="textinput" value="<?php echo $settings['disqus_shortname']; ?>" name="settings[disqus_shortname]" />
                 </td>
                 <td class="help">
                     <?php echo __('Sets the disqus_shortname variable of the site you are using.  Your shortname can be found on the <a href="http://disqus.com/admin/settings/">Settings > General</a> Disqus admin page.'); ?>
                 </td>
+            </tr>
+            <tr>
+                <td class="label"><label for="comment_counts"><?php echo __('Display Comment Counts'); ?>: </label></td>
+                <td class="field">
+                    <select class="select" name="settings[comment_counts]" id="setting_comment_counts">
+                        <option value="1" <?php if ($settings['comment_counts'] == "1") echo 'selected ="";' ?>><?php echo __('Yes'); ?></option>
+                        <option value="0" <?php if ($settings['comment_counts'] == "0") echo 'selected ="";' ?>><?php echo __('No'); ?></option>
+                    </select>
+                </td>
+                <td class="help"><?php echo __('Should comment counts be displayed in the summary lines of posts with comments enabled?'); ?></td>
             </tr>
         </table>
     </fieldset>
