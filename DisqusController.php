@@ -37,20 +37,11 @@ class DisqusController extends PluginController {
     }
 
     function index() {
-//        $this->display('disqus/views/index');
         $this->display('disqus/views/documentation');
     }
 
     function settings() {
-        if (Plugin::getAllSettings('disqus')) {
-            $tmp = Plugin::getAllSettings('disqus');
-            $settings = array(
-                'disqus_shortname' => $tmp['disqus_shortname']
-            );
-        } else {
-            $settings = array('disqus_shortname' => '');
-        }
-        $this->display('disqus/views/settings', $settings);
+        $this->display('disqus/views/settings', array('settings' => Plugin::getAllSettings('disqus')));
     }
 
     function documentation() {
@@ -58,22 +49,23 @@ class DisqusController extends PluginController {
     }
 
     function save() {
-        $disqus_shortname = $_POST['disqus_shortname'];
+        if (isset($_POST['settings'])) {
+            $settings = $_POST['settings'];
 
-        $settings = array(
-            'disqus_shortname' => $disqus_shortname
-        );
+            $ret = Plugin::setAllSettings($settings, 'disqus');
 
-        $ret = Plugin::setAllSettings($settings, 'disqus');
-
-        if ($ret)
-            Flash::set('success', __('The settings have been updated.'));
-        else
-            Flash::set('error', 'An error has occured.');
+            if ($ret) {
+                Flash::set('success', __('The settings have been saved.'));
+            }
+            else {
+                Flash::set('error', 'An error occured trying to save the settings.');
+            }
+        }
+        else {
+            Flash::set('error', 'Could not save settings, no settings found.');
+        }
 
         redirect(get_url('plugin/disqus/settings'));
     }
 
 }
-
-// end DisqusController class
