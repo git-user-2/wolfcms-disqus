@@ -3,7 +3,7 @@ wolfcms-disqus
 
 ##### Disqus comment integration for Wolf CMS
 
-### How to use this plugin
+### Displaying Comment Threads
 
 After enabling the plugin, navigate to the plugin's settings page and enter your 'disqus\_shortname' value. This is the identifier that Disqus uses for a given 'forum' as they call it. You can find this value on the [Settings > General][1] Disqus admin page.
 
@@ -21,6 +21,21 @@ You will need to add the following lines of code to your layout - place them whe
         if ($this->comment_status != Disqus::NONE)
         {
             $this->includeSnippet('disqus_boilerplate');
+        }
+    }
+?>
+```
+### Displaying Comment Count Summaries
+
+In order to display comment counts (enabled by default) you will need to add the below lines of code to the bottom of your layout. 
+
+```php
+<?php
+    if (Plugin::isEnabled('disqus'))
+    {
+        if (Plugin::getSetting('comment_count', 'disqus') == TRUE)
+        {
+            $this->includeSnippet('comment_count');
         }
     }
 ?>
