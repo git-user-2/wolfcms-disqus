@@ -31,11 +31,11 @@ if (!defined('IN_CMS')) { exit(); }
                 </td>
             </tr>
             <tr>
-                <td class="label"><label for="comment_counts"><?php echo __('Display Comment Counts'); ?>: </label></td>
+                <td class="label"><label for="comment_count"><?php echo __('Display Comment Counts'); ?>: </label></td>
                 <td class="field">
-                    <select class="select" name="settings[comment_counts]" id="setting_comment_counts">
-                        <option value="1" <?php if ($settings['comment_counts'] == "1") echo 'selected ="";' ?>><?php echo __('Yes'); ?></option>
-                        <option value="0" <?php if ($settings['comment_counts'] == "0") echo 'selected ="";' ?>><?php echo __('No'); ?></option>
+                    <select class="select" name="settings[comment_count]" id="setting_comment_count">
+                        <option value="1" <?php if ($settings['comment_count'] == "1") echo 'selected ="";' ?>><?php echo __('Yes'); ?></option>
+                        <option value="0" <?php if ($settings['comment_count'] == "0") echo 'selected ="";' ?>><?php echo __('No'); ?></option>
                     </select>
                 </td>
                 <td class="help"><?php echo __('Should comment counts be displayed in the summary lines of posts with comments enabled?'); ?></td>
