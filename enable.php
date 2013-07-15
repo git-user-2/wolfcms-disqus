@@ -60,7 +60,7 @@ if (Plugin::getSetting('disqus_shortname', 'disqus') == FALSE)
     // Store settings new style
     $settings = array(
         'disqus_shortname' => 'changeme',
-        'comment_counts' => 'TRUE'
+        'comment_count' => 'TRUE'
     );
     Plugin::setAllSettings($settings, 'disqus');
 }
