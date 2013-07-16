@@ -27,7 +27,7 @@ Add the following lines of code to the bottom of your layout (just before the cl
   <?php if (Plugin::getSetting('comment_count', 'disqus') == TRUE); ?>
     <?php $this->includeSnippet('comment_count'); ?>
   <?php endif; ?>
-<?php endif; 
+<?php endif; ?>
 ```
 
 Then add the following line to your layout where you would like the comments section to appear:
