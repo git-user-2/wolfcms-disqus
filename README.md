@@ -20,13 +20,13 @@ On each page edit screen, you will now have a drop-down box available called 'Di
 Add the following lines of code to the bottom of your layout (just before the closing `</body>` tag):
 
 ```php
-<?php if (Plugin::isEnabled('disqus')); ?>
-  <?php if ($this->comment_status != Disqus::NONE); ?>
-    <?php $this->includeSnippet('disqus_boilerplate'); ?>
-  <?php endif; ?>
-  <?php if (Plugin::getSetting('comment_count', 'disqus') == TRUE); ?>
-    <?php $this->includeSnippet('comment_count'); ?>
-  <?php endif; ?>
+<?php if (Plugin::isEnabled('disqus')): ?>
+    <?php if ($this->comment_status != Disqus::NONE): ?>
+        <?php $this->includeSnippet('disqus_boilerplate'); ?>
+    <?php endif; ?>
+    <?php if (Plugin::getSetting('comment_count', 'disqus') == TRUE): ?>
+        <?php $this->includeSnippet('comment_count'); ?>
+    <?php endif; ?>
 <?php endif; ?>
 ```
 
