@@ -72,7 +72,7 @@ the full '%B %Y Archive' then looks like this:
 
 ### Change Log
 
-#### 0.0.2
+#### 0.1.0
 
 * added 'comment_count' setting - yes or no value deciding whether or not comment counts will be displayed on post summaries
 * disqus_boilerplate js snippet now placed at bottom of layout, only `<div id="disqus_thread"></div>` needs to be placed where comments should appear 
