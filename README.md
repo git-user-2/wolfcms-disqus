@@ -72,6 +72,10 @@ the full '%B %Y Archive' then looks like this:
 
 ### Change Log
 
+#### 0.1.1
+
+* updated documentation view to point to github readme
+
 #### 0.1.0
 
 * added 'comment_count' setting - yes or no value deciding whether or not comment counts will be displayed on post summaries
