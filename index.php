@@ -18,7 +18,7 @@ Plugin::setInfos(array(
 	'id'          => 'disqus',
 	'title'       => __('Disqus'),
 	'description' => __('Disqus for Wolf CMS.'),
-	'version'     => '0.0.1',
+	'version'     => '0.1.2',
 	'license'     => 'GPL',
 	'author'      => 'Kyle Jones',
 	'website'     => 'http://www.whabash.com/',

@@ -19,4 +19,4 @@ if (!defined('IN_CMS')) { exit(); }
 
 <h4>Disqus comment integration for Wolf CMS</h4>
 
-<p>Please see <a href="https://github.com/whabash090/wolfcms-disqus#wolfcms-disqus">https://github.com/whabash090/wolfcms-disqus#wolfcms-disqus</a> for documentation.</p>
+<p>Please see <a href="https://github.com/whabash090/wolfcms-disqus#wolfcms-disqus">https://github.com/whabash090/wolfcms-disqus#wolfcms-disqus</a> for documentation and install instructions.</p>
