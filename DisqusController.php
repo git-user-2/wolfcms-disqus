@@ -4,7 +4,7 @@
 if (!defined('IN_CMS')) { exit(); }
 
 /**
- * The Disqus plugin allows the use of Disqus for disqus functionality on a Wolf CMS installation.
+ * The Disqus plugin allows the use of Disqus for comment functionality on a Wolf CMS installation.
  *
  * @package Plugins
  * @subpackage disqus
@@ -37,7 +37,7 @@ class DisqusController extends PluginController {
     }
 
     function index() {
-        $this->display('disqus/views/documentation');
+        $this->display('disqus/views/admin_tab');
     }
 
     function settings() {
@@ -51,20 +51,15 @@ class DisqusController extends PluginController {
     function save() {
         if (isset($_POST['settings'])) {
             $settings = $_POST['settings'];
-
             $ret = Plugin::setAllSettings($settings, 'disqus');
-
             if ($ret) {
                 Flash::set('success', __('The settings have been saved.'));
-            }
-            else {
+            } else {
                 Flash::set('error', 'An error occured trying to save the settings.');
             }
-        }
-        else {
+        } else {
             Flash::set('error', 'Could not save settings, no settings found.');
         }
-
         redirect(get_url('plugin/disqus/settings'));
     }
 
